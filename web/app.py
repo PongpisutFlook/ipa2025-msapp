@@ -5,15 +5,18 @@ from flask import redirect
 from flask import url_for
 from pymongo import MongoClient
 from bson import ObjectId
+import os
 
 sample = Flask(__name__)
 
 data = []
+mongo_uri  = os.environ.get("MONGO_URI")
+db_name    = os.environ.get("DB_NAME")
 
 ## ---- mongoDB ----
 # connect to mongo
-client = MongoClient("mongodb://mongo:27017/")
-mydb = client["ipa2025"]
+client = MongoClient(mongo_uri)
+mydb = client[db_name]
 mycol = mydb["routers"]
 
 data = mycol.find()
