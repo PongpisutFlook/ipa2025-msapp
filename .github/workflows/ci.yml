@@ -42,10 +42,11 @@ jobs:
 
     - name: Build & Push Docker Images
       run: |
-        docker build -t PongpisutFlook/worker:latest ./worker
-        docker build -t PongpisutFlook/scheduler:latest ./scheduler
-        docker build -t PongpisutFlook/web:latest ./web
+        docker build -t pongpisutflook/worker:latest ./worker
+        docker build -t pongpisutflook/scheduler:latest ./scheduler
+        docker build -t pongpisutflook/web:latest ./web
 
-        docker push PongpisutFlook/worker:latest
-        docker push PongpisutFlook/scheduler:latest
-        docker push PongpisutFlook/web:latest
+        docker push pongpisutflook/worker:latest
+        docker push pongpisutflook/scheduler:latest
+        docker push pongpisutflook/web:latest
+
