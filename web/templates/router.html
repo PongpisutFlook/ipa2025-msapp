@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Router Interfaces for {{ data[0].router_ip if data|length > 0 else '' }}</title>
+  <link rel="stylesheet" href="/static/style.css" />
+
+</head>
+<body>
+  <h1>Router Interfaces for {{ data[0].router_ip if data|length > 0 else 'No Data' }}</h1>
+
+  {% if data|length == 0 %}
+    <p>No router data found.</p>
+  {% else %}
+    <table>
+      <thead>
+        <tr>
+          <th>Timestamp</th>
+          <th>Interface</th>
+          <th>IP Address</th>
+          <th>Status</th>
+          <th>Protocol</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for record in data %}
+          {% for iface in record.interfaces %}
+            <tr>
+              <td>{{ record.timestamp }}</td>
+              <td>{{ iface.interface }}</td>
+              <td>{{ iface.ip_address }}</td>
+              <td>{{ iface.status }}</td>
+              <td>{{ iface.proto }}</td>
+            </tr>
+          {% endfor %}
+        {% endfor %}
+      </tbody>
+    </table>
+  {% endif %}
+</body>
+</html>
