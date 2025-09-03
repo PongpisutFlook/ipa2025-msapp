@@ -28,7 +28,7 @@ def main():
 
 @sample.route("/router/<router_ip>")
 def show_route(router_ip):
-    data = list(interface.find({"router_ip": router_ip}).sort("timestamp", -1).limit(3))
+    data = list(interface.find({"router_ip": router_ip}).sort("timestamp", -1).limit(5))
     return render_template("router.html", data=data)
 
 
