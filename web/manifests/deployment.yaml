@@ -17,7 +17,7 @@ spec:
         - name: ipa2025-msapp-web
           image: pongpisutflook/web:latest
           ports:
-            - containerPort: 8080
+            - containerPort: 5050
           envFrom:
             - secretRef:
                 name: env # ชื่อ secret ให้ตรงกับที่เราสร้าง secret ใน rancher
