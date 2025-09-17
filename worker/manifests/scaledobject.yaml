@@ -16,7 +16,7 @@ spec:
         queueName: router_jobs
         mode: QueueLength
         value: "10"
-        protocol: auto
+        protocol: amqp
         host: amqp://192.168.110.139:5672/
         username: admin
         password: rabbitmq
