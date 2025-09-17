@@ -18,6 +18,6 @@ spec:
         value: "10"
         vhostName: /
         protocol: amqp
-        host: amqp://192.168.110.139:5672/
+        host: 192.168.110.139:5672
         username: admin
         password: rabbitmq
