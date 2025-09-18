@@ -1,16 +1,16 @@
 import os
 
 from pymongo import MongoClient
+from bson import json_util
 
 
 def get_router_info():
     mongo_uri = os.environ.get("MONGO_URI")
     db_name = os.environ.get("DB_NAME")
+    print(mongo_uri, db_name)
     client = MongoClient(mongo_uri)
     db = client[db_name]
     routers = db["routers"]
-    print(mongo_uri, router_data)
-
     router_data = routers.find()
     return router_data
 
