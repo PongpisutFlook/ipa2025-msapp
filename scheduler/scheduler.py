@@ -7,7 +7,7 @@ import os
 
 
 def scheduler():
-    INTERVAL = 30.0
+    INTERVAL = 1
     next_run = time.monotonic()
     count = 0
     host = os.getenv("RABBITMQ_HOST")
