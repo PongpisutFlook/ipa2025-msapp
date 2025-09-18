@@ -23,8 +23,8 @@ def scheduler():
                 body_bytes = json_util.dumps(data).encode("utf-8")
                 produce(host, body_bytes)
         except Exception as e:
-            print(e)
-            time.sleep(3)
+            # print(e)
+            # time.sleep(3)
         count += 1
         next_run += INTERVAL
         time.sleep(max(0.0, next_run - time.monotonic()))
