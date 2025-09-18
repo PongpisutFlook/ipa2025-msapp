@@ -26,7 +26,7 @@ def scheduler():
         except Exception as e:
             print("❌ Error type:", type(e).__name__)
             print("❌ Error message:", str(e))
-            traceback.print_exc() 
+            traceback.print_exc()
             time.sleep(3)
         count += 1
         next_run += INTERVAL
