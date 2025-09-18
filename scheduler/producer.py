@@ -24,4 +24,4 @@ def produce(host, body):
 
 
 if __name__ == "__main__":
-    produce("rabbitmq", "192.168.1.44")
+    produce("rabbitmq", "192.168.110.139")
