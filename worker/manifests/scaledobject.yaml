@@ -17,4 +17,4 @@ spec:
         mode: QueueLength
         value: "10"
         protocol: auto
-        host: amqp://admin:rabbitmq@192.168.110.139:5672/
+        hostFromEnv: RABBITMQ_URI
