@@ -1,6 +1,7 @@
 import time
 from bson import json_util
 from producer import produce
+import traceback
 from database import get_router_info
 import os
 
