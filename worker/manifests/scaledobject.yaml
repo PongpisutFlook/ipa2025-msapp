@@ -17,6 +17,6 @@ spec:
         mode: QueueLength
         value: "10"
         protocol: auto
-        host: 192.168.110.139:5672
+        host: amqp://192.168.110.139:5672/
         usernameFromEnv: RABBITMQ_DEFAULT_USER
         passwordFromEnv: RABBITMQ_DEFAULT_PASS
