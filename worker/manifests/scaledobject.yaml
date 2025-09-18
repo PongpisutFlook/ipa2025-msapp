@@ -17,6 +17,4 @@ spec:
         mode: QueueLength
         value: "10"
         protocol: auto
-        host: amqp://192.168.110.139:5672/
-        username: admin
-        password: rabbitmq
+        host: amqp://admin:rabbitmq@192.168.110.139:5672/
