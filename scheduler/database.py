@@ -1,6 +1,7 @@
 import os
 
 from pymongo import MongoClient
+from bson import json_util
 
 
 def get_router_info():
@@ -12,7 +13,7 @@ def get_router_info():
     routers = db["routers"]
 
     router_data = routers.find()
-    print(router_data)
+    print(json_util.dumps(list(router_data), indent=2))
     return router_data
 
 
