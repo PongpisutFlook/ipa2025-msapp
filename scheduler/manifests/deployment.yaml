@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: ipa2025-msapp-scheduler
-          image: fewza49144/scheduler:latest
+          image: pongpisutflook/scheduler:latest
           envFrom:
             - secretRef:
                 name: env
