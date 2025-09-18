@@ -1,7 +1,6 @@
 import os
 
 from pymongo import MongoClient
-from bson import json_util
 
 
 def get_router_info():
