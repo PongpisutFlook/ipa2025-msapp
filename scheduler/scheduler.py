@@ -22,7 +22,7 @@ def scheduler():
             for data in get_router_info():
                 body_bytes = json_util.dumps(data).encode("utf-8")
                 produce(host, body_bytes)
-        except Exception as e:
+        except Exception:
             # print(e)
             time.sleep(3)
         count += 1
