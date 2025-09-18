@@ -12,6 +12,7 @@ def get_router_info():
     routers = db["routers"]
 
     router_data = routers.find()
+    print(router_data)
     return router_data
 
 
