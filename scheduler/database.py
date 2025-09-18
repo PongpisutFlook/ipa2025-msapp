@@ -13,7 +13,6 @@ def get_router_info():
     routers = db["routers"]
 
     router_data = routers.find()
-    print(json_util.dumps(list(router_data), indent=2))
     return router_data
 
 

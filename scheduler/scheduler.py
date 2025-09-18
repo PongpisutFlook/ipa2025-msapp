@@ -22,8 +22,10 @@ def scheduler():
             for data in get_router_info():
                 body_bytes = json_util.dumps(data).encode("utf-8")
                 produce(host, body_bytes)
-        except Exception:
-            # print(e)
+        except Exception as e:
+            print("❌ Error type:", type(e).__name__)
+            print("❌ Error message:", str(e))
+            traceback.print_exc() 
             time.sleep(3)
         count += 1
         next_run += INTERVAL
